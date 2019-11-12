@@ -1,0 +1,16 @@
+<div style="text-align:center">
+    <h1>
+        Shopping app
+    </h1>
+    <a routerLink="/tienda" class="btn btn-outline-primary">Tienda</a>
+</div>
+<hr />
+<div class="container">
+    <router-outlet></router-outlet>
+
+    <div class="row" *ngFor="let data of posts">
+        <div class="col">User ID: {{ data.userId }}</div>
+        <div class="col">Id: {{ data.id }}</div>
+        <div class="col">Tittle: {{ data.title | titlecase }}</div>
+    </div>
+</div>
